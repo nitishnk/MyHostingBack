@@ -16,7 +16,12 @@ connectDB().catch(err => {
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000"], 
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
+  allowedHeaders: ["Authorization", "Content-Type"], 
+  credentials: true 
+}));
 app.use(express.json());
 
 // Routes
