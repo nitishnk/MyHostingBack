@@ -1,0 +1,141 @@
+/* Main chat container */
+.posts {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  background-color: #020202; /* Match your background color */
+  width: 70vw; /* Adjust width as needed */
+  margin-top: 80px !important; /* Adjusted to match the navbar height */
+  margin-left: 0px !important; /* Adjusted to match the logo width */
+  padding-top: 0px;
+  color: aliceblue;
+  overflow-y: hidden !important;
+  scrollbar-width: none !important; /* Hide scrollbar for Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chat Header */
+.chat-header {
+  margin-top: 75px;
+  padding: 10px;
+  background-color: #1e1e1e; /* Dark background for header */
+  border-bottom: 1px solid #2f3136;
+  height: 7%;
+  text-align: center;
+}
+
+.chat-header h2 {
+  text-align: center;
+  color: rgba(159, 159, 167, 0.801);
+  margin-top: 7px;
+  font-size: 22px;
+  text-transform: capitalize; /* Ensure first letter is uppercase */
+}
+
+/* Chat Messages - Scrollable */
+.chat-messages {
+  flex-grow: 1; /* Takes up remaining space */
+  overflow-y: auto; /* Enables scrolling */
+  padding: 10px; /* Padding for messages */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between messages */
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual chat message */
+.message {
+  display: flex;
+  flex-direction: column; /* Stack sender name above message */
+  align-items: flex-start;
+  max-width: 70%;
+  padding: 10px;
+  background-color: #1e92e2; /* Message background */
+  border-radius: 5px;
+  /* word-wrap: break-word; */
+  margin-bottom: 10px;
+}
+
+/* Sender name */
+.message-sender {
+  font-size: 12px !important; /* ✅ Fixed font size */
+  font-weight: bold;
+  color: #020202; /* White color for contrast */
+  margin-bottom: 5px;
+}
+
+/* Message text */
+.message-text {
+  font-size: 16px;
+  background-color: #000000;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 100%;
+  /* word-wrap: break-word; */
+  color: aliceblue; /* White text for readability */
+}
+
+/* Timestamp styling */
+.message-timestamp {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #8181816e; /* Semi-transparent background */
+  border-top: 1px solid #2f3136;
+  width: 100%;
+  position: sticky; /* Keeps input fixed at the bottom */
+  bottom: 0; /* Positions input at the bottom */
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  background-color: #000000ba; /* Dark input background */
+  color: white;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #050505; /* Dark button background */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #677bc4; /* Button hover effect */
+  color: black;
+}
+
+/* Align messages properly */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Different style for user’s own messages */
+.own-message {
+  align-self: flex-end;
+  background-color: #4caf50 !important; /* Green bubble for own messages */
+}

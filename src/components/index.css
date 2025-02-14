@@ -1,0 +1,240 @@
+
+.top {
+  position: fixed !important;
+  background: rgb(122,122,122) !important;
+  background: linear-gradient(33deg, rgba(122,122,122,1) 34%, rgba(187,186,186,1) 83%) !important;
+  height: 9vh !important;
+  margin: 2px !important;
+  border: 2px solid black !important;
+  overflow: hidden !important;
+}
+a {
+  text-decoration: none !important;
+}
+.feed {
+    margin-top: 10px !important;
+    transform: translate(25%, -30%) rotateX(2deg); /* Tilt text upwards */
+    text-transform: uppercase;
+    font-family: Gill Sans;
+    font-size: 20em;
+    font-weight: 700;
+    color: #111111;
+    text-shadow:  
+      0px -1px 1px #919191,
+      0px -2px 1px #919191,
+      0px -3px 1px #919191,
+      0px -4px 1px #919191,
+      0px -5px 1px #919191,
+      0px -6px 1px #919191,
+      0px -7px 1px #919191,
+      0px -8px 1px #919191,
+      0px -9px 1px #919191,
+      0px -10px 1px #919191,
+      0px -15px 6px rgba(16,16,16,0.4),
+      0px -19px 10px rgba(16,16,16,0.2),
+      0px -22px 30px rgba(16,16,16,0.2),
+      0px -25px 50px rgba(16,16,16,0.4);
+    perspective: 100px; /* Adds depth effect */
+}
+.all .feed {
+margin-right: 25% !important;
+margin-bottom: 10px !important;
+font-weight: 400 !important;
+font-size: 45px !important;
+padding-bottom: 1opx !important;
+}
+
+.all .notif {
+margin-right: 40px !important;
+}
+
+.all .chat {
+margin-right: 8% !important;
+}
+/* .profile {
+margin-left: 50% !important;
+} */
+
+.ourlogo {
+margin-top: -25px !important;
+margin-inline-start: -12px !important;
+z-index: 9999!important;
+}
+
+.action {
+position: absolute;
+top: 25px;
+right: 45px;
+width: 10% !important;
+
+}
+
+.action .profile {
+position: relative;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+overflow: hidden;
+cursor: pointer;
+margin-top: 2px;
+margin-left: 25%;
+z-index: 2000!important;
+}
+
+.action .profile img {
+position: absolute;
+top: 10;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+margin-top: 0px;
+}
+
+.action .menu {
+position: fixed;
+margin-top: 20px;
+right: 40px;
+padding: 10px 20px;
+background: #fff;
+width: 200px;
+box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+border-radius: 15px;
+transition: 0.5s;
+visibility: hidden;
+opacity: 0;
+z-index: 2000!important;
+}
+
+.action .menu.active {
+top: 60px;
+visibility: visible;
+opacity: 1;
+}
+
+.action .menu::before {
+content: "";
+position: absolute;
+top: -5px;
+right: 100px;
+width: 20px;
+height: 20px;
+background: #fff;
+transform: rotate(45deg);
+}
+
+.action .menu h3 {
+width: 100%;
+text-align: center;
+font-size: 18px;
+padding: 20px 0;
+font-weight: 500;
+color: #555;
+line-height: 1.5em;
+}
+
+.action .menu h3 span {
+font-size: 14px;
+color: #cecece;
+font-weight: 300;
+}
+
+.action .menu ul li {
+list-style: none;
+padding: 16px 0;
+border-top: 1px solid rgba(0, 0, 0, 0.05);
+display: flex;
+align-items: center;
+}
+
+.action .menu ul li img {
+max-width: 20px;
+margin-right: 10px;
+opacity: 0.5;
+transition: 0.5s;
+}
+
+.action .menu ul li:hover img {
+opacity: 1;
+}
+
+.action .menu ul li a {
+display: inline-block;
+text-decoration: none;
+color: #555;
+font-weight: 500;
+transition: 0.5s;
+}
+
+.action .menu ul li:hover a {
+color: #ff5d94;
+}
+/*main conatiner below*/
+.main-content {
+margin: 0 !important;
+min-height: 100vh;
+}
+
+.sidebar-left{
+    width: 13%;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center;
+    background-color: #c50000;
+    padding-top: 20px !important; /* Add some padding at the top
+    gap: 20px; Automatically creates a 20px vertical gap between items*/
+  } 
+  
+  /* Additional styling for sidebar content */
+ .sidebar-left > * {
+    margin: 0; /* Ensure no extra margins conflict */
+  }
+
+.sidebar-right {
+background-color: #f8f9fa;
+/* padding: 10px; */
+}
+
+.main-column {
+background-color: #fff;
+text-align: center;
+padding: 20px;
+}
+/* pop up */
+/* Navbar and profile icons hover effect */
+.navbar-icon img,
+.profile img {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.navbar-icon img:hover,
+.profile img:hover {
+transform: scale(1.2); /* Slightly enlarges the icon */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+cursor: pointer; /* Changes the cursor to pointer */
+}
+
+/* Optional: Make the menu items pop up as well */
+.menu ul li img {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu ul li img:hover {
+transform: scale(1.2);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-icon img {
+background-color: transparent; /* Ensure the background is transparent */
+/* border-radius: 0%; Optional: makes the image circular */
+/* padding: 5px; Adds some padding around the icon */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-icon img:hover {
+transform: scale(1.2); /* Slightly enlarges the icon */
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);    */
+background-color: transparent; /* Optional: a slight white overlay on hover */
+}
+/* Ensure the main content container does not overflow */

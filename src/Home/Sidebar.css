@@ -1,0 +1,164 @@
+.leftbar {
+  flex: 0 0 15vw; /* Fixed width using flex */
+  width: 15vw; /* Ensures consistency */
+  overflow-y: auto; /* Shows scrollbar only when needed */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(33deg, rgba(126,126,126,1) 12%, rgba(182,181,181,1) 49%);
+  margin-top: 30%; /* Prevents overlap with fixed header */
+  color: rgb(255, 255, 255) !important;
+}
+
+.leftbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+}
+
+.list-group {
+  --bs-list-group-item-padding-x: 3rem !important;
+  --bs-list-group-item-padding-y: 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0 !important;
+}
+
+.scrollable-section {
+  overflow-y: auto !important; /* Enable internal scrolling */
+}
+
+.scrollable-section::-webkit-scrollbar {
+  display: none !important; /* Hide scrollbar for Webkit browsers */
+}
+.rightbar {
+  flex: 3; /* Adjust the flex value to control its width relative to other sections */
+  overflow-y: auto !important; /* Ensure scrolling inside this section */
+  height: 100vh !important; /* Full viewport height */
+  background: rgb(187,186,186);
+  background: linear-gradient(33deg, rgba(187,186,186,1) 36%, rgba(122,122,122,1) 59%); /* Example background color */
+  width: 15vw; /* Fixed width for the left bar */
+  margin-top: 30%;/* To offset the fixed header */
+  padding: 20px; /* Add inner spacing */
+  color:aliceblue; /* Text color */
+  /* border: 1px solid rgb(255, 255, 255) !important; */
+}
+
+.scrollable-section {
+  overflow-y: scroll !important; /* Enable internal scrolling */
+  scrollbar-width: none !important; /* Hide scrollbar for Firefox */
+}
+
+.scrollable-section::-webkit-scrollbar {
+  display: none !important; /* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+}
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  flex-grow: 1;
+  color: black;
+}
+
+.follow-btn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.follow-btn:hover {
+  background-color: #0056b3;
+}
+@import "https://unpkg.com/open-props/easings.min.css";
+
+@layer demo {
+  .bouncy-focus {
+    --_focus-size: 0;
+    --_focus-duration: .2s;
+    --_focus-ease: var(--ease-out-5);
+    
+    box-shadow: 0 0 0 var(--_focus-size) Highlight;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: box-shadow var(--_focus-duration) var(--_focus-ease);
+    }
+
+    &:not(:active):is(:focus-visible,:hover) {
+      --_focus-size: 1rem;
+      --_focus-duration: .5s;
+      --_focus-ease: var(--ease-elastic-out-3);
+      
+      @supports (transition-timing-function: linear(0,1)) {
+        --_focus-ease: var(--ease-spring-3);
+      }
+    }
+  }
+}
+
+@layer demo.support {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    block-size: 100%;
+    color-scheme: dark light;
+  }
+
+  body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+
+    display: grid;
+    place-content: center;
+  }
+  
+  section {
+    display: flex;
+    gap: 3rem;
+    
+    & button {
+      background: none;
+      border: none;
+      padding: 0;
+      border-radius: 1e3px;
+      
+      inline-size: 5rem;
+      aspect-ratio: 1;
+    }
+    
+    & svg {
+      inline-size: 3rem;
+      block-size: 3rem;
+      stroke: currentColor;
+      fill: none;
+    }
+  }
+}

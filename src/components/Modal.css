@@ -1,0 +1,67 @@
+/* Success Modal Specific Styles */
+.success-modal {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(#c1e2f1, #f7e8f6);
+  }
+  
+  .success-modal .container {
+    margin-top: 250px !important;
+  }
+  
+  .success-modal p {
+    font-size: calc(12px + (13 - 12) * ((100vw - 360px) / (1600 - 300))) !important;
+  }
+  
+  .success-modal button:focus {
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+  
+  .success-modal .card {
+    background: #222222;
+    border-radius: 11px !important;
+    width: calc(280px + 10 * ((100vw - 320px) / 680));
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .success-modal .card-header {
+    border: 0;
+    border-radius: 11px !important;
+    background: #222222 !important;
+    position: relative;
+  }
+  
+  .success-modal .btn-success {
+    border-radius: 20px !important;
+    background-color: #9BEAC0 !important;
+  }
+  
+  .success-modal .btn-success:hover {
+    background-color: #9BEAC0 !important;
+  }
+  
+  .success-modal img {
+    width: 100px !important;
+  }
+  
+  .success-modal .card-body {
+    border-radius: 9px !important;
+  }
+  
+  .success-modal .card-1 {
+    color: #A4EAC0 !important;
+  }
+  
+  .success-modal .cross {
+    cursor: pointer;
+    width: 45px !important;
+  }
+  
+  .success-modal .modal {
+    background: linear-gradient(#03a9f4, #e91ee3) !important;
+  }
+  
+  .success-modal .modal-content {
+    background: transparent !important;
+  }
+  
