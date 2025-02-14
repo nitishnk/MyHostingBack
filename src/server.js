@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://strugglermedia-fr6zk7gnj-nitish-giddes-projects.vercel.app",
     methods: ["GET", "POST"],
   },
 });
