@@ -18,10 +18,12 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://strugglermedia-fr6zk7gnj-nitish-giddes-projects.vercel.app",
+    origin: "*", // Temporarily allow all origins
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
+
 
 io.on("connection", (socket) => {
   socket.on("joinCategory", async (categoryName) => {
