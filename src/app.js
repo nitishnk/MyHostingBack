@@ -19,7 +19,7 @@ connectDB().catch(err => {
 
 // Middleware
 app.use(cors({
-  origin: ["https://strugglermedia-fr6zk7gnj-nitish-giddes-projects.vercel.app"], 
+  origin: ["https://v0-new-project-nwajtuuejau.vercel.app"], 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
   allowedHeaders: ["Authorization", "Content-Type"], 
   credentials: true 
