@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*", // Temporarily allow all origins
+    origin: "https://v0-new-project-nwajtuuejau.vercel.app", // Temporarily allow all origins
     methods: ["GET", "POST"],
     credentials: true,
   },
